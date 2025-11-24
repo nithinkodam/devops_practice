@@ -49,5 +49,13 @@ app.delete('/users/:id', (req, res) => {
   res.json(removed);
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Server running on ${port}`));
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => console.log(`Server running on ${port}`));
+
+if (require.main === module) {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => console.log(`Server running on ${port}`));
+}
+
+module.exports = app;
+
