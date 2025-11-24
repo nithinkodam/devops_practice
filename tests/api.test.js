@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../server"); // update path if needed
+const app = require("../index"); // update path if needed
 
 describe("API Tests", () => {
   it("GET / should return status ok", async () => {
